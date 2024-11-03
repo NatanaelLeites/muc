@@ -71,22 +71,23 @@ body {
   background-size: contain;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
   height: 100vh;
-  padding-top: 1em;
+  padding-top: 7em;
 
   h1 {
     color: #dedede;
     font-size: 6em;
     text-align: center;
     text-shadow: 0px 0px 3px #000000;
+    margin-bottom: 1em;
   }
 
   .animated-button {
+    margin-left: 180px;
     position: relative;
     display: flex;
     align-items: center;
+    width: 200px;
     gap: 4px;
     padding: 16px 36px;
     border: 4px solid;
@@ -174,57 +175,106 @@ body {
 }
 
 .curso-programa-container {
-  
-  padding-top: 4em;
+
+  padding-top: 5em;
   width: 100vw;
   max-width: 120em;
   background-color: #1f453d;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding-bottom: 1em;
+  padding-bottom: 5em;
 
-  h2 {
-    width: 100vw;
-    padding: .5em;
-    font-size: 3em;
-    background-color: #0000006a;
-    color: #dedede;
+  .openModal {
+    width: 300px;
+    padding: 1em;
+    border: solid 2px #ffffff;
+    color: #ffffff;
+    background-color: #008000;
+    margin-left: 2em;
+    border-radius: 15px;
+    font-size: 1.5em;
+    transition: all .3s;
+    cursor: pointer;
+  }
+  .openModal:hover{
+    background-color: #1f453d;
   }
 
-  .bloque {
-    width: 70%;
-    margin: 1em 0 1em;
-    padding: 1em;
-    background-color: #8383836a;
-    border-radius: 20px;
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    backdrop-filter: blur(3px);
 
-    .titular {
-      color: #ffffff;
-      font-size: 1.3em;
-      background-color: #0000006a;
-      padding: 0.5em;
-      border-radius: 15px;
-    }
+    .modal-content {
+      background-color: #1f453d;
+      box-shadow: 0px 0px 40px #000000bf;
+      margin: 15% auto;
+      padding: 20px;
+      border-radius: 20px;
+      width: 80%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
 
+      .close {
+        color: #ffffff;
+        font-size: 2em;
+        font-weight: bold;
+        transition: all .3s;
 
-    .contenido {
-      padding-top: 0.5em;
-      padding-left: 3em;
+      }
 
-      li {
-        font-size: 1.3em;
+      .close:hover,
+      .close:focus {
+        color: #929292;
+        text-decoration: none;
+        cursor: pointer;
       }
     }
 
+    .bloque {
+      width: 70%;
+      margin: 1em;
+      padding: 1em;
+      background-color: #8383836a;
+      border-radius: 20px;
+
+      .titular {
+        color: #ffffff;
+        font-size: 1.3em;
+        background-color: #0000006a;
+        padding: 0.5em;
+        border-radius: 15px;
+      }
+
+
+      .contenido {
+        padding-top: 0.5em;
+        padding-left: 3em;
+
+        li {
+          font-size: 1.3em;
+          color: #ffffff;
+        }
+      }
+    }
   }
+
 
 }
 
 .equipo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 100vh;
-  padding-top: 4em;
+  padding: 4em 2em 0 2em;
   background-image: linear-gradient(to top, #39393941, #010101d9), url('../images/fondo-equipo.jpg');
   background-position: center center;
   background-repeat: no-repeat;
@@ -232,8 +282,53 @@ body {
 
   .profesor {
     height: 300px;
-    border: solid 3px #008000;
     cursor: pointer;
     padding: 1em;
+  }
+
+  p {
+    color: #ffffff;
+    font-size: 1.5em;
+    padding: 1em;
+  }
+}
+
+
+footer {
+  padding: 1.5em;
+  background-color: #1f453d;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: #ffffff;
+
+  p {
+    font-style: italic;
+  }
+
+  ul {
+    display: flex;
+    align-items: center;
+
+    li {
+      margin: 0 .5em;
+
+      .bx-right-arrow-alt {
+        font-size: 1.5em;
+        padding-right: 1em;
+        padding-left: .3em;
+      }
+
+      a {
+        text-decoration: none;
+        color: #ffffff;
+        font-size: 2.5em;
+
+        i {
+          cursor: pointer;
+        }
+      }
+
+    }
   }
 }
