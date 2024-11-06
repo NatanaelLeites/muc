@@ -1,0 +1,114 @@
+.hero {
+    padding: 0 5em;
+    background-image:
+        linear-gradient(to top, #39393941, #010101d9), url("../images/fondo3.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    
+    h1 {
+        
+        color: #dedede;
+        font-size: 6em;
+        text-shadow: 0px 0px 3px #000000;
+    }
+    .hero-texto {
+        padding-top: 2em;
+        color: #d4d4d4;
+        font-size: 3em;
+    }
+
+    .animated-button {
+        position: relative;
+        display: flex;
+        align-items: center;
+        width: 200px;
+        gap: 4px;
+        padding: 16px 36px;
+        border: 4px solid;
+        border-color: transparent;
+        font-size: 20px;
+        background-color: #298974;
+        border-radius: 100px;
+        font-weight: 600;
+        color: #ffffff;
+        text-shadow: 0px 0px 2px #000000;
+        box-shadow: 0 0 0 2px #ffffff;
+        cursor: pointer;
+        overflow: hidden;
+        transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    .animated-button svg {
+        position: absolute;
+        width: 34px;
+        fill: #ffffff;
+        z-index: 9;
+        transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    .animated-button .arr-1 {
+        right: 16px;
+    }
+
+    .animated-button .arr-2 {
+        left: -25%;
+    }
+
+    .animated-button .circle {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 20px;
+        height: 20px;
+        background-color: #d4d4d4;
+        border-radius: 50%;
+        opacity: 0;
+        transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    .animated-button .text {
+        position: relative;
+        z-index: 1;
+        transform: translateX(-12px);
+        transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    .animated-button:hover {
+        box-shadow: 0 0 0 12px transparent;
+        color: #00653e;
+        border-radius: 12px;
+        text-shadow: none;
+    }
+
+    .animated-button:hover .arr-1 {
+        right: -25%;
+    }
+
+    .animated-button:hover .arr-2 {
+        left: 16px;
+    }
+
+    .animated-button:hover .text {
+        transform: translateX(12px);
+    }
+
+    .animated-button:hover svg {
+        fill: #00653e;
+    }
+
+    .animated-button:active {
+        scale: 0.95;
+        box-shadow: 0 0 0 4px greenyellow;
+    }
+
+    .animated-button:hover .circle {
+        width: 220px;
+        height: 220px;
+        opacity: 1;
+    }
+}

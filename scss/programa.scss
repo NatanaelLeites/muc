@@ -1,0 +1,47 @@
+.curso-programa-container {
+
+    padding: 5em 5em;
+    width: 100vw;
+    max-width: 120em;
+    background-color: #232323;
+    background-color: #729376;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 5em;
+
+    .titulo-programa{
+        display: flex;
+        align-items: center;
+        color: #d5d5d5;
+        background-color: #1f453d;
+        margin: 0;
+        padding: 0.5em 20px;
+        border-radius: 10px 10px 0 0;
+        i{
+            margin: 0 0 0 10px;
+        }
+    }
+    .accordion-body {
+        background-color: #1f453d;
+    }
+
+    .accordion-button {
+        background-color: #0f7962;
+        color: #ffffff;
+    }
+
+    .contenido {
+
+        li {
+            font-size: 1.1em;
+            color: #d5d5d5;
+        }
+    }
+
+
+
+
+}
