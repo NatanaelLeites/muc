@@ -2,6 +2,7 @@
 @import 'header';
 @import 'hero';
 @import 'programa';
+@import 'equipo';
 @import 'footer';
 * {
   box-sizing: border-box;
@@ -30,28 +31,4 @@ body {
 
 .show {
   opacity: 1;
-}
-
-.equipo-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  padding: 4em 2em 0 2em;
-  background-image: linear-gradient(to top, #39393941, #010101d9), url('../images/fondo-equipo.jpg');
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-
-  .profesor {
-    height: 300px;
-    cursor: pointer;
-    padding: 1em;
-  }
-
-  p {
-    color: #ffffff;
-    font-size: 1.5em;
-    padding: 1em;
-  }
 }

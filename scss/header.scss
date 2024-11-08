@@ -6,7 +6,7 @@
     align-items: center;
     justify-content: space-between;
     width: 100vw;
-    padding: 1em 2em;
+    padding: .8em 2em;
 
     a {
         .logo {
@@ -20,6 +20,9 @@
             display: flex;
             gap: 1em;
 
+            li{
+                padding-top: 10px;
+            }
             a {
                 font-size: 18px;
                 color: #e1e1e1;
@@ -34,7 +37,7 @@
 
             a:focus,
             a:hover {
-                color: #00c90d;
+                color: #ffffff;
             }
 
             a:focus:after,
@@ -46,12 +49,12 @@
             a:after {
                 content: "";
                 pointer-events: none;
-                bottom: -2px;
+                bottom: -4px;
                 left: 50%;
                 position: absolute;
                 width: 0%;
                 height: 2px;
-                background-color: $color-principal;
+                background-color: #1f453d;
                 transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
                 transition-duration: 400ms;
                 transition-property: width, left;

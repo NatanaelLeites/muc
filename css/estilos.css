@@ -6,12 +6,14 @@
   align-items: center;
   justify-content: space-between;
   width: 100vw;
-  padding: 1em 2em; }
+  padding: .8em 2em; }
   .header a .logo {
     height: 40px; }
   .header .nav .nav-links {
     display: flex;
     gap: 1em; }
+    .header .nav .nav-links li {
+      padding-top: 10px; }
     .header .nav .nav-links a {
       font-size: 18px;
       color: #e1e1e1;
@@ -24,7 +26,7 @@
       transition-property: color; }
     .header .nav .nav-links a:focus,
     .header .nav .nav-links a:hover {
-      color: #00c90d; }
+      color: #ffffff; }
     .header .nav .nav-links a:focus:after,
     .header .nav .nav-links a:hover:after {
       width: 100%;
@@ -32,19 +34,19 @@
     .header .nav .nav-links a:after {
       content: "";
       pointer-events: none;
-      bottom: -2px;
+      bottom: -4px;
       left: 50%;
       position: absolute;
       width: 0%;
       height: 2px;
-      background-color: #3f953f;
+      background-color: #1f453d;
       transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
       transition-duration: 400ms;
       transition-property: width, left; }
 
 .hero {
   padding: 0 5em;
-  background-image: linear-gradient(to top, #39393941, #010101d9), url("../images/fondo3.jpg");
+  background-image: linear-gradient(#0000008e, #00000084), url("../images/fondo1.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -126,14 +128,10 @@
     opacity: 1; }
 
 .curso-programa-container {
-  padding: 5em 5em;
+  padding: 5em 200px;
   width: 100vw;
-  max-width: 120em;
+  max-width: 100em;
   background-color: #232323;
-  background-color: #729376;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
   display: flex;
   flex-direction: column;
   padding-bottom: 5em; }
@@ -155,6 +153,32 @@
   .curso-programa-container .contenido li {
     font-size: 1.1em;
     color: #d5d5d5; }
+
+.equipo-container {
+  height: 100vh;
+  padding: 4em 2em 0 2em;
+  background-image: linear-gradient(#000000b4, #000000b5), url("../images/fondo6.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+  .equipo-container .foto-descripcion {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .equipo-container .foto-descripcion .profesor {
+      height: 500px;
+      cursor: pointer;
+      padding: 1em; }
+    .equipo-container .foto-descripcion p {
+      color: #ffffff;
+      padding: 1em;
+      font-size: 1.5em;
+      text-shadow: 2px 2px 10px #000000; }
+  .equipo-container .verificaciones i {
+    color: #ffffff;
+    font-size: 24px; }
+  .equipo-container .verificaciones p {
+    color: #ffffff; }
 
 footer {
   padding: 1.5em;
@@ -202,22 +226,3 @@ body {
 
 .show {
   opacity: 1; }
-
-.equipo-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  padding: 4em 2em 0 2em;
-  background-image: linear-gradient(to top, #39393941, #010101d9), url("../images/fondo-equipo.jpg");
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover; }
-  .equipo-container .profesor {
-    height: 300px;
-    cursor: pointer;
-    padding: 1em; }
-  .equipo-container p {
-    color: #ffffff;
-    font-size: 1.5em;
-    padding: 1em; }
