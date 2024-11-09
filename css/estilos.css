@@ -8,7 +8,7 @@
   width: 100vw;
   padding: .8em 2em; }
   .header a .logo {
-    height: 40px; }
+    height: 60px; }
   .header .nav .nav-links {
     display: flex;
     gap: 1em; }
@@ -45,22 +45,32 @@
       transition-property: width, left; }
 
 .hero {
-  padding: 0 5em;
-  background-image: linear-gradient(#0000008e, #00000084), url("../images/fondo1.jpg");
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  position: relative;
+  /* background-image:
+        linear-gradient(#0000008e, #00000084), url("../images/video-fondo.mp4"); */
+  /* background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover; */
   display: flex;
   flex-direction: column;
   height: 100vh; }
   .hero h1 {
     color: #dedede;
     font-size: 6em;
-    text-shadow: 0px 0px 3px #000000; }
+    text-shadow: 0px 0px 3px #000000;
+    z-index: 99;
+    padding-left: 1em; }
   .hero .hero-texto {
     padding-top: 2em;
     color: #d4d4d4;
-    font-size: 3em; }
+    font-size: 3em;
+    z-index: 99;
+    padding-left: 2em;
+    text-shadow: 0px 0px 3px #000000; }
+  .hero .video-fondo {
+    position: absolute;
+    width: 100vw;
+    object-fit: cover; }
   .hero .animated-button {
     position: relative;
     display: flex;
@@ -79,7 +89,8 @@
     box-shadow: 0 0 0 2px #ffffff;
     cursor: pointer;
     overflow: hidden;
-    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1); }
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    margin-left: 100px; }
   .hero .animated-button svg {
     position: absolute;
     width: 34px;
@@ -155,7 +166,7 @@
     color: #d5d5d5; }
 
 .equipo-container {
-  height: 100vh;
+  height: 85vh;
   padding: 4em 2em 0 2em;
   background-image: linear-gradient(#000000b4, #000000b5), url("../images/fondo6.jpg");
   background-position: center center;
@@ -166,7 +177,7 @@
     justify-content: center;
     align-items: center; }
     .equipo-container .foto-descripcion .profesor {
-      height: 500px;
+      height: 400px;
       cursor: pointer;
       padding: 1em; }
     .equipo-container .foto-descripcion p {
@@ -174,14 +185,24 @@
       padding: 1em;
       font-size: 1.5em;
       text-shadow: 2px 2px 10px #000000; }
-  .equipo-container .verificaciones i {
+
+.verificaciones {
+  width: 100%;
+  padding: 1em 2em;
+  background-color: #2b2b2b; }
+  .verificaciones .graduado {
+    display: flex; }
+  .verificaciones .experiencia {
+    display: flex; }
+  .verificaciones i {
     color: #ffffff;
-    font-size: 24px; }
-  .equipo-container .verificaciones p {
+    font-size: 24px;
+    padding-right: 1em; }
+  .verificaciones p {
     color: #ffffff; }
 
 footer {
-  padding: 1.5em;
+  padding: 1em;
   background-color: #1f453d;
   display: flex;
   align-items: center;

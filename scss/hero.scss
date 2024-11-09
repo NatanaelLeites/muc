@@ -1,10 +1,11 @@
 .hero {
-    padding: 0 5em;
-    background-image:
-        linear-gradient(#0000008e, #00000084), url("../images/fondo1.jpg");
-    background-position: center center;
+    
+    position: relative;
+    /* background-image:
+        linear-gradient(#0000008e, #00000084), url("../images/video-fondo.mp4"); */
+    /* background-position: center center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; */
     display: flex;
     flex-direction: column;
     height: 100vh;
@@ -13,11 +14,22 @@
         color: #dedede;
         font-size: 6em;
         text-shadow: 0px 0px 3px #000000;
+        z-index: 99;
+        padding-left: 1em;
     }
     .hero-texto {
         padding-top: 2em;
         color: #d4d4d4;
         font-size: 3em;
+        z-index: 99;
+        padding-left: 2em;
+        text-shadow: 0px 0px 3px #000000;
+        
+    }
+    .video-fondo{
+        position: absolute;
+        width: 100vw;
+        object-fit: cover;
     }
 
     .animated-button {
@@ -39,6 +51,7 @@
         cursor: pointer;
         overflow: hidden;
         transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+        margin-left: 100px;
     }
 
     .animated-button svg {
